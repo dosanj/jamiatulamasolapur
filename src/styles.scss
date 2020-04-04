@@ -2,28 +2,3 @@
 .ant-layout-sider-zero-width-trigger {
   top: 1px;
 }
-
-body {
-  background: #00171F;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: white;
-}
-
-nz-breadcrumb-item {
-  color: white;
-
-  &:last-child {
-    color: white !important;
-  }
-}
-
-.ant-breadcrumb-separator {
-  color: white;
-}
