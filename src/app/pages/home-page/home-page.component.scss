@@ -53,7 +53,7 @@ nz-sider {
 }
 
 nz-content {
-  background: #03427b;
+  background: #003459;
   padding: 24px;
   color: white;
   min-height: 280px;
@@ -65,7 +65,7 @@ nz-content {
 }
 
 nz-header {
-  background: #0056A9;
+  background: #00171F;
   color: white;
   padding: 0;
   position: fixed;
@@ -73,6 +73,9 @@ nz-header {
   z-index: 2;
 }
 
+.side-menu-ul {
+  height: calc(100vh - 64px);
+}
 
 @media screen and (max-width: 640px) {
   nz-sider {
@@ -91,5 +94,5 @@ nz-header {
 }
 
 .ant-layout {
-  background: #0056A9;
+  background: #00171F;
 }

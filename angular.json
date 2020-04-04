@@ -32,11 +32,7 @@
                                 "output": "/assets/"
                             }
                         ],
-                        "styles": [
-                            "src/assets/bootstrap-4-utilities.min.css",
-                            "src/theme.less",
-                            "src/styles.scss"
-                        ],
+                        "styles": ["src/theme.less", "src/styles.scss"],
                         "scripts": []
                     },
                     "configurations": {
