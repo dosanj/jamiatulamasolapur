@@ -1,38 +1,41 @@
+.trigger {
+  font-size: 20px;
+  margin-right: 16px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
 .logo {
   width: 150px;
-  margin: auto;
-  color: white;
   cursor: pointer;
+}
+
+.header-menu {
+  margin-left: auto;
+  background: transparent;
 }
 
 .ant-layout-header {
   line-height: unset;
   display: flex;
   padding: 0 24px;
+  align-items: center;
+  box-shadow: inset -1px -2px 2px #ffab5278;
 }
+
 
 .ant-layout-sider {
   background: transparent;
 }
 
 .donate {
-  border-radius: 10px;
-  background-color: #1890ff;
-  padding: 4px 16px;
-  color: #bae7ff;
-}
-
-.header-menu {
-  flex: 1;
-  line-height: 64px;
+  padding-left: 0;
   display: flex;
-  margin-right: -20px;
-  justify-content: flex-end;
-}
-
-.sider-menu {
-  height: 100%;
-  border-right: 0;
+  justify-content: center;
 }
 
 .inner-layout {
@@ -40,11 +43,53 @@
 }
 
 nz-breadcrumb {
-  margin: 16px 0;
+  height: 48px;
+  line-height: 48px;
+}
+
+
+nz-sider {
+  position: relative;
 }
 
 nz-content {
-  background: #fff;
+  background: #03427b;
   padding: 24px;
+  color: white;
   min-height: 280px;
+  border-radius: 15px;
+}
+
+.header-items {
+  display: flex;
+}
+
+nz-header {
+  background: #0056A9;
+  color: white;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+
+@media screen and (max-width: 640px) {
+  nz-sider {
+    position: fixed;
+  }
+
+  .side-menu-ul {
+    height: 100vh;
+  }
+
+}
+
+
+.layout {
+  margin-top: 64px;
+}
+
+.ant-layout {
+  background: #0056A9;
 }

@@ -1,36 +1,59 @@
-<nz-layout>
+<nz-layout class="main-layout">
     <nz-header>
-        <div class="logo">Jamait Ulama Solapur</div>
-        <ul nz-menu nzTheme="dark" nzMode="verticle" class="header-menu">
-            <li nz-menu-item>Become a Member</li>
-            <li nz-menu-item><span class="donate">Donate Us</span></li>
+        <div style="display: flex;">
+            <i
+                class="trigger"
+                nz-icon
+                [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+                (click)="isCollapsed = !isCollapsed"
+            ></i>
+            <div class="logo">Jamait Ulama Solapur</div>
+        </div>
+        <ul nz-menu [nzMode]="'horizontal'" class="header-menu">
+            <a nz-dropdown [nzDropdownMenu]="menu">
+                About Us
+                <i nz-icon nzType="down"></i>
+            </a>
+
+            <nz-dropdown-menu #menu="nzDropdownMenu">
+                <ul nz-menu nzSelectable>
+                    <li nz-menu-item>Become a member</li>
+                    <li nz-menu-item>2nd menu item</li>
+                    <li nz-menu-item>3rd menu item</li>
+                </ul>
+            </nz-dropdown-menu>
         </ul>
     </nz-header>
-    <nz-layout>
-        <nz-sider
-            nzCollapsible
-            [(nzCollapsed)]="isCollapsed"
-            [nzBreakpoint]="'lg'"
-            [nzCollapsedWidth]="0"
-            nzTheme="dark"
-            nzWidth="250px"
-        >
-            <ul nz-menu nzMode="inline">
-                <app-side-menu-item
-                    *ngFor="let item of sideMenuDetails"
-                    [sideMenuItem]="item"
-                    (changeSelection)="openLink($event)"
-                >
-                </app-side-menu-item>
-            </ul>
-        </nz-sider>
-        <nz-layout class="inner-layout">
-            <nz-breadcrumb>
-                <nz-breadcrumb-item *ngFor="let item of breadcrumb">{{
-                    item
-                }}</nz-breadcrumb-item>
-            </nz-breadcrumb>
-            <nz-content><router-outlet></router-outlet></nz-content>
+    <div class="layout">
+        <nz-layout>
+            <nz-sider
+                nzCollapsible
+                [(nzCollapsed)]="isCollapsed"
+                [nzBreakpoint]="'xs'"
+                [nzCollapsedWidth]="0"
+                [nzTrigger]="null"
+                nzWidth="250px"
+            >
+                <ul nz-menu nzMode="inline" class="side-menu-ul" nzTheme="dark">
+                    <app-side-menu-item
+                        *ngFor="let item of sideMenuDetails"
+                        [sideMenuItem]="item"
+                        (changeSelection)="openLink($event)"
+                    >
+                    </app-side-menu-item>
+                    <li nz-menu-item class="donate">
+                        <button nz-button nzType="primary">Donate Us</button>
+                    </li>
+                </ul>
+            </nz-sider>
+            <nz-layout class="inner-layout">
+                <nz-breadcrumb>
+                    <nz-breadcrumb-item *ngFor="let item of breadcrumb">{{
+                        item
+                    }}</nz-breadcrumb-item>
+                </nz-breadcrumb>
+                <nz-content><router-outlet></router-outlet></nz-content>
+            </nz-layout>
         </nz-layout>
-    </nz-layout>
+    </div>
 </nz-layout>

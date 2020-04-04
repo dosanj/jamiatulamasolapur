@@ -4,7 +4,7 @@ export const contentData: {
     [key: string]: IContentData;
 } = {
     cleanliness: {
-        heading: 'CLEANLINESS IN MUSLIM SOCIETY',
+        heading: 'Cleanliness In Muslim Society',
         text:
             'Throwing garbage and spitting on roads. Dirty Masjid Toilet. Clean house but dirty society.',
         videosList: [

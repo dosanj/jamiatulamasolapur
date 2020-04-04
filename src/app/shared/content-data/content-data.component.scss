@@ -1,0 +1,15 @@
+.videos-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -16px;
+  justify-content: flex-start;
+}
+
+.yt-video {
+  margin: 16px auto;
+  box-shadow: 3px 3px 9px #ffab5278;
+}
+
+.yt-video-text {
+  padding: 8px
+}

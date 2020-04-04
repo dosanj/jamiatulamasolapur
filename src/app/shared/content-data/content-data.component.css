@@ -1,9 +1,0 @@
-.videos-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -16px;
-}
-
-.yt-video {
-  margin: 16px;
-}

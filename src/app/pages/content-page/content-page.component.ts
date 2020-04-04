@@ -8,7 +8,7 @@ import { IContentData } from '../../shared/shared-models';
 @Component({
     selector: 'app-content-page',
     templateUrl: './content-page.component.html',
-    styleUrls: ['./content-page.component.css'],
+    styleUrls: ['./content-page.component.scss'],
 })
 export class ContentPageComponent implements OnInit {
     content$: Observable<IContentData>;

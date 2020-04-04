@@ -17,6 +17,7 @@ import { SideMenuItemComponent } from './shared/side-menu-item/side-menu-item.co
 import { ContentPageComponent } from './pages/content-page/content-page.component';
 import { ContentDataComponent } from './shared/content-data/content-data.component';
 import { SafePipeModule } from 'safe-pipe';
+import { NzAnchorModule } from 'ng-zorro-antd/anchor';
 
 registerLocaleData(en);
 
@@ -35,6 +36,7 @@ registerLocaleData(en);
         BrowserAnimationsModule,
         IconsProviderModule,
         NgZorroAntdModule,
+        NzAnchorModule,
         FormsModule,
         HttpClientModule,
         NoopAnimationsModule,
