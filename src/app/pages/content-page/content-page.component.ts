@@ -16,6 +16,7 @@ export class ContentPageComponent implements OnInit {
 
     ngOnInit() {
         this.content$ = this.route.params.pipe(
+            tap(console.log),
             map((params: any) => contentData[params.link])
         );
     }

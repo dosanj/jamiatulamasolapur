@@ -3,6 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { ContentPageComponent } from './pages/content-page/content-page.component';
 const routes: Routes = [
     {
+        path: '',
+        component: ContentPageComponent,
+    },
+    {
         path: ':link',
         component: ContentPageComponent,
     },

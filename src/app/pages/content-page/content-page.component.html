@@ -1,1 +1,4 @@
-<app-content-data [content]=" content$ | async"></app-content-data>
+<app-content-data [content]="content$ | async"></app-content-data>
+<div *ngIf="!(content$ | async)">
+    <h1>Home page information</h1>
+</div>
