@@ -1,0 +1,24 @@
+<ng-container *ngIf="content">
+    <h1>
+        {{ content.heading }}
+    </h1>
+    <h4>{{ content.text }}</h4>
+
+    <div class="videos-list">
+        <ng-container
+            *ngIf="content.videosList && content.videosList.length > 0"
+        >
+            <div *ngFor="let video of content.videosList" class="yt-video">
+                <iframe
+                    class="yt_players"
+                    id="link1"
+                    [src]="video.url | safe: 'resourceUrl'"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen=""
+                ></iframe>
+                <div class="yt-video-text">{{ video.englishText }}</div>
+            </div>
+        </ng-container>
+    </div>
+</ng-container>

@@ -1,0 +1,27 @@
+<li
+    nz-submenu
+    [nzTitle]="sideMenuItem.name"
+    [nzOpen]="sideMenuItem.expand"
+    *ngIf="
+        sideMenuItem.children && sideMenuItem.children.length > 0;
+        else noChildren
+    "
+>
+    <ul>
+        <app-side-menu-item
+            *ngFor="let item of sideMenuItem.children"
+            [sideMenuItem]="item"
+            (changeSelection)="openLink($event)"
+        >
+        </app-side-menu-item>
+    </ul>
+</li>
+<ng-template #noChildren>
+    <li
+        nz-menu-item
+        [nzSelected]="sideMenuItem.selected"
+        (click)="openLink(sideMenuItem.link)"
+    >
+        {{ sideMenuItem.name }}
+    </li>
+</ng-template>
