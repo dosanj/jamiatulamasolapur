@@ -17,6 +17,12 @@
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen=""
                 ></iframe>
+                <div class="yt-video-text urduText" *ngIf="video.urduText">
+                    {{ video.urduText }}
+                </div>
+                <div class="yt-video-text" *ngIf="video.hindiText">
+                    {{ video.hindiText }}
+                </div>
                 <div class="yt-video-text">{{ video.englishText }}</div>
             </div>
         </ng-container>

@@ -24,9 +24,8 @@
   display: flex;
   padding: 0 24px;
   align-items: center;
-  box-shadow: 0px 2px 2px #e8e8e8;
+  box-shadow: 0px 2px 4px #103252;
 }
-
 
 .ant-layout-sider {
   background: transparent;
@@ -47,16 +46,15 @@ nz-breadcrumb {
   line-height: 48px;
 }
 
-
 nz-sider {
   position: relative;
 }
 
 nz-content {
-  background: #fff;
+  background: #e6f7ff;
   padding: 24px;
   min-height: 280px;
-  border-radius: 15px;
+  box-shadow: inset 0px 0px 6px;
 }
 
 .header-items {
@@ -64,11 +62,16 @@ nz-content {
 }
 
 nz-header {
-  background: #fff;
+  background: #103252;
   padding: 0;
   position: fixed;
   width: 100%;
   z-index: 2;
+  color: #f5f5f5;
+
+  .about-us {
+    color: #f5f5f5;
+  }
 }
 
 .side-menu-ul {
@@ -84,9 +87,7 @@ nz-header {
   .side-menu-ul {
     height: 100vh;
   }
-
 }
-
 
 .layout {
   margin-top: 64px;

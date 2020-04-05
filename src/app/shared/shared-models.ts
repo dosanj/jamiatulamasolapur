@@ -10,6 +10,8 @@ export interface IContentData {
     text?: string;
     videosList?: {
         englishText: string;
+        hindiText: string;
+        urduText: string;
         url: string;
     }[];
 }

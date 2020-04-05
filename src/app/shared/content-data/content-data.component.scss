@@ -7,10 +7,26 @@
 
 .yt-video {
   margin: 16px auto;
-  box-shadow: 4px 4px 4px #e8e8e8;
+  box-shadow: inset 0px 0px 8px #103252;
+  color: #103252;
   overflow: hidden;
 }
 
 .yt-video-text {
-  padding: 8px
+  padding: 8px 8px 0 8px;
+
+  &:last-child {
+    padding-bottom: 8px;
+  }
+
+  text-align: center;
+}
+
+.urduText {
+  font-family: JameelKhushkhatLRegular;
+  font-size: 18px;
+}
+
+iframe {
+  margin-bottom: -5px;
 }
