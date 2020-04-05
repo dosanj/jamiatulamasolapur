@@ -12,6 +12,10 @@
   overflow: hidden;
   width: 310px;
 
+  @media screen and (max-width: 640px) {
+    width: calc(100% - 32px);
+  }
+
   /* white-space: normal; */
   /* word-break: inherit;*/
 }
@@ -35,4 +39,8 @@ iframe {
   margin-bottom: -5px;
   height: 300px;
   width: 310px;
+
+  @media screen and (max-width: 640px) {
+    width: 100%;
+  }
 }
