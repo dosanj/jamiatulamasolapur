@@ -12,7 +12,7 @@
   overflow: hidden;
   width: 310px;
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 576px) {
     width: calc(100% - 32px);
   }
 
@@ -40,7 +40,7 @@ iframe {
   height: 300px;
   width: 310px;
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 576px) {
     width: 100%;
   }
 }

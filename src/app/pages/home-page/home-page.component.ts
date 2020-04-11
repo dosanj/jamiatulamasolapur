@@ -23,6 +23,17 @@ export class HomePageComponent implements OnInit {
         });
     }
 
+    isSmallDevice() {
+        // https://stackoverflow.com/a/8876069
+        const width = Math.max(
+            document.documentElement.clientWidth,
+            window.innerWidth || 0
+        );
+        if (width <= 576) {
+            return true;
+        }
+        return false;
+    }
     openLink(item: ISideMenuItem) {
         if (item) {
             if (item.url) {
@@ -31,7 +42,9 @@ export class HomePageComponent implements OnInit {
                 this.router.navigate([createUrl(item)]);
             }
         }
-        this.isCollapsed = true;
+        if (this.isSmallDevice()) {
+            this.isCollapsed = true;
+        }
     }
     changeSelection(link) {
         this.breadcrumb = [];
