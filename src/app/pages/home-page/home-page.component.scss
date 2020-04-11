@@ -1,6 +1,7 @@
 .trigger {
   font-size: 20px;
   margin-right: 16px;
+  display: none;
   cursor: pointer;
   transition: color 0.3s;
 }
@@ -89,6 +90,10 @@ nz-header {
 
   .inner-layout {
     margin-left: 0;
+  }
+
+  .trigger {
+    display: inline;
   }
 }
 
