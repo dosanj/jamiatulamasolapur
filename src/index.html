@@ -6,12 +6,24 @@
         <base href="/" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
-        <link
+        <!--       <link
             rel="stylesheet"
             media="screen"
             href="https://fontlibrary.org/face/jameel-khushkhat-l"
             type="text/css"
+            async
+        /> -->
+        <link
+            rel="preload"
+            href="https://fontlibrary.org/face/jameel-khushkhat-l"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
         />
+        <noscript
+            ><link
+                rel="stylesheet"
+                href="https://fontlibrary.org/face/jameel-khushkhat-l"
+        /></noscript>
     </head>
     <body>
         <app-root></app-root>

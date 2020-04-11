@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { ISideMenuItem } from '../../shared/shared-models';
 import { sideMenuDetails } from './navigation-page-data';
+import { createUrl } from '../../shared/content-data';
 
 @Component({
     selector: 'app-home-page',
@@ -21,21 +22,13 @@ export class HomePageComponent implements OnInit {
             }
         });
     }
-    createUrl(item: ISideMenuItem) {
-        if (item.url) {
-            return item.url;
-        }
-        if (item && item.name && !item.children) {
-            return '/' + item.name.toLowerCase().replace(/ /g, '-');
-        }
-        return null;
-    }
+
     openLink(item: ISideMenuItem) {
         if (item) {
             if (item.url) {
                 window.open(item.url, '_blank');
             } else {
-                this.router.navigate([this.createUrl(item)]);
+                this.router.navigate([createUrl(item)]);
             }
         }
     }
@@ -54,7 +47,7 @@ export class HomePageComponent implements OnInit {
     markItemSelected(item: ISideMenuItem, link): boolean {
         if (!item.children || item.children.length === 0) {
             item.selected =
-                item.name && link ? this.createUrl(item) === link : false;
+                item.name && link ? createUrl(item) === link : false;
             return item.selected;
         }
         item.expand = false;
