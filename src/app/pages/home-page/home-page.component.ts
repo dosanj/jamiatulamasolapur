@@ -31,6 +31,7 @@ export class HomePageComponent implements OnInit {
                 this.router.navigate([createUrl(item)]);
             }
         }
+        this.isCollapsed = true;
     }
     changeSelection(link) {
         this.breadcrumb = [];
