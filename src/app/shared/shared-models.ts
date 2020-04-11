@@ -1,5 +1,7 @@
 export interface ISideMenuItem {
     name: string;
+    urduHeading?: string;
+    hindiHeading?: string;
     expand?: boolean;
     url?: string;
     selected?: boolean;

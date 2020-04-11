@@ -1522,7 +1522,7 @@ export const sideMenuDetails: ISideMenuItem[] = [
                         },
                     },
                     {
-                        name: 'Destiny and planning ',
+                        name: 'Destiny and Planning',
                         content: {
                             heading: 'DESTINY OR PLANING',
                             text:
@@ -1676,7 +1676,8 @@ export const sideMenuDetails: ISideMenuItem[] = [
                         content: {
                             heading: 'MARRIAGE PREPARATION',
                             text:
-                                "Researchers found the 'right' amount of time to date beforot as long as ye getting married — and it's nou'd think. A study found that waiting a bit to get married can decrease the likelihood you'll get divorced. Specifically, waiting three years or more decreases the likelihood of divorce by 50%.",
+                                // tslint:disable-next-line:max-line-length
+                                "Researchers found the \"right\" amount of time to date beforot as long as ye getting married — and it's nou'd think. A study found that waiting a bit to get married can decrease the likelihood you'll get divorced. Specifically, waiting three years or more decreases the likelihood of divorce by 50%.",
                             videosList: [
                                 {
                                     url:
@@ -1733,6 +1734,7 @@ export const sideMenuDetails: ISideMenuItem[] = [
                         content: {
                             heading: 'FIND RIGHT LIFE PARTNER',
                             text:
+                                // tslint:disable-next-line:max-line-length
                                 'Take a test drive. ... Look for A. Religiousness B. Good Nature C. Compatibility D. Decent Family E. Reason F. Physical and Mental Health G. Whom can you Marry?someone who is kind and loving. ...',
                             videosList: [
                                 {
@@ -1886,6 +1888,7 @@ export const sideMenuDetails: ISideMenuItem[] = [
                         content: {
                             heading: 'AFTER MARRIAGE',
                             text:
+                                // tslint:disable-next-line:max-line-length
                                 '12 short videos. Supplication for first night. Prayer for first night. Halal Waleema. How to take bath. Staying Away from wife. 52 sexual knowledge points. Expending on wife. Good Wife. Joint family.What wife wants?Honeymoon.',
                             videosList: [
                                 {
@@ -2094,11 +2097,12 @@ export const sideMenuDetails: ISideMenuItem[] = [
                         },
                     },
                     {
-                        name: 'Court Involvment ',
+                        name: 'Court Involvment',
                         content: {
                             heading: 'AFTER MARRIAGE COURT CASES',
                             text:
-                                "You have two spouses: the one you haven't divorced yet and the one you just married. ... Civil family laws treat the concept of bigamy somewhat differently; because your second marriage is illegal, it technically can't exist. You can still be prosecuted in criminal court, but you don't have to divorce to end the marriage.",
+                                // tslint:disable-next-line:max-line-length
+                                'You have two spouses: the one you have not divorced yet and the one you just married. ... Civil family laws treat the concept of bigamy somewhat differently; because your second marriage is illegal, it technically can not exist. You can still be prosecuted in criminal court, but you do not have to divorce to end the marriage.',
                             videosList: [
                                 {
                                     url:
@@ -2264,6 +2268,7 @@ export const sideMenuDetails: ISideMenuItem[] = [
                             heading:
                                 'PARENTING GUIDLINES - NEWBORN TO 5 YEARS OLD',
                             text:
+                                // tslint:disable-next-line:max-line-length
                                 'Newborn baby - Things to do and not to do. Keeping name and circumcision, Black Threads, Aqeeqa,Massage, Birthday,When kid starts talking, cleanliness, schooling age.',
                             videosList: [
                                 {
@@ -2578,7 +2583,7 @@ export const sideMenuDetails: ISideMenuItem[] = [
         ],
     },
     {
-        name: 'Speacial Messages',
+        name: 'Special Messages',
         children: [
             {
                 name: 'To Ulama',
@@ -3175,7 +3180,7 @@ export const sideMenuDetails: ISideMenuItem[] = [
         ],
     },
     {
-        name: 'Islami History',
+        name: 'Islamic History',
         children: [
             {
                 name: 'Muslim in Freedom of India',
@@ -3372,7 +3377,7 @@ export const sideMenuDetails: ISideMenuItem[] = [
                                 'Top 10 misconception about Islam including terrorism',
                         },
                     ],
-            },
+                },
             },
         ],
     },

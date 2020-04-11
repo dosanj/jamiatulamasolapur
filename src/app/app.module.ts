@@ -12,6 +12,7 @@ import {
     NzDropDownModule,
     NzIconModule,
     NzButtonModule,
+    NzSelectModule,
 } from 'ng-zorro-antd';
 import { registerLocaleData, CommonModule } from '@angular/common';
 import en from '@angular/common/locales/en';
@@ -27,9 +28,11 @@ import { SideMenuItemComponent } from './shared/side-menu-item/side-menu-item.co
 import { ContentPageComponent } from './pages/content-page/content-page.component';
 import { ContentDataComponent } from './shared/content-data/content-data.component';
 import { SafePipeModule } from 'safe-pipe';
+import localeHi from '@angular/common/locales/hi';
 import { NzAnchorModule } from 'ng-zorro-antd/anchor';
+import { LanguagePipe } from './shared/language.pipe';
 
-registerLocaleData(en);
+registerLocaleData(localeHi, 'hi-HI');
 
 @NgModule({
     declarations: [
@@ -37,6 +40,7 @@ registerLocaleData(en);
         HomePageComponent,
         SideMenuItemComponent,
         ContentPageComponent,
+        LanguagePipe,
         ContentDataComponent,
     ],
     imports: [

@@ -1,6 +1,6 @@
 <li
     nz-submenu
-    [nzTitle]="sideMenuItem.name"
+    [nzTitle]="sideMenuItem.name | language: currentLanguage"
     [nzOpen]="sideMenuItem.expand"
     *ngIf="
         sideMenuItem.children && sideMenuItem.children.length > 0;
@@ -11,6 +11,7 @@
         <app-side-menu-item
             *ngFor="let item of sideMenuItem.children"
             [sideMenuItem]="item"
+            [currentLanguage]="currentLanguage"
             (changeSelection)="openLink($event)"
         >
         </app-side-menu-item>
@@ -22,6 +23,6 @@
         [nzSelected]="sideMenuItem.selected"
         (click)="openLink(sideMenuItem)"
     >
-        {{ sideMenuItem.name }}
+        {{ sideMenuItem.name | language: currentLanguage }}
     </li>
 </ng-template>

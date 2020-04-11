@@ -9,7 +9,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #103252
+  color: #103252;
 }
 
 @font-face {
@@ -17,4 +17,18 @@ h6 {
   src: url('./assets/fonts/UrduFont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+
+.urduText {
+  font-family: UrduFont;
+  font-size: 18px;
+
+  .ant-menu-submenu-title {
+    font-size: 22px;
+  }
+
+  .ant-menu-item {
+    font-size: 22px;
+  }
+
 }

@@ -13,6 +13,7 @@ export class HomePageComponent implements OnInit {
     sideMenuDetails = sideMenuDetails;
     breadcrumb = [];
     isCollapsed = false;
+    currentLanguage = 'English';
     constructor(private router: Router) {}
 
     ngOnInit() {
@@ -32,7 +33,9 @@ export class HomePageComponent implements OnInit {
             }
         });
     }
-
+    setLanguage(lang: string) {
+        this.currentLanguage = lang;
+    }
     isSmallDevice() {
         // https://stackoverflow.com/a/8876069
         const width = Math.max(

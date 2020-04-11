@@ -1,23 +1,63 @@
 <nz-layout class="main-layout">
     <nz-header>
-        <div style="display: flex;">
+        <div style="display: flex; align-items: center;">
             <i
                 class="trigger"
                 nz-icon
                 [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
                 (click)="isCollapsed = !isCollapsed"
             ></i>
-            <div class="logo" routerLink="/">Jamiat Ulama Solapur</div>
+            <div class="logo" routerLink="/">
+                Jamiat Ulama Solapur
+                <ul nz-menu [nzMode]="'horizontal'" class="header-menu">
+                    <a
+                        nz-dropdown
+                        [nzDropdownMenu]="menuLanguage"
+                        class="dropdown-heading language"
+                        >A अ ب
+                        <i nz-icon nzType="down"></i>
+                    </a>
+
+                    <nz-dropdown-menu #menuLanguage="nzDropdownMenu">
+                        <ul nz-menu nzSelectable>
+                            <li
+                                nz-menu-item
+                                class="urduText"
+                                (click)="setLanguage('Urdu')"
+                            >
+                                اردو
+                            </li>
+                            <li nz-menu-item (click)="setLanguage('English')">
+                                English
+                            </li>
+                            <li nz-menu-item (click)="setLanguage('Hindi')">
+                                हिंदी
+                            </li>
+                        </ul>
+                    </nz-dropdown-menu>
+                </ul>
+            </div>
         </div>
-        <ul nz-menu [nzMode]="'horizontal'" class="header-menu">
-            <a nz-dropdown [nzDropdownMenu]="menu" class="about-us">
-                About Us
+
+        <ul
+            nz-menu
+            [nzMode]="'horizontal'"
+            class="header-menu"
+            [class.urduText]="currentLanguage === 'Urdu'"
+        >
+            <a nz-dropdown [nzDropdownMenu]="menu" class="dropdown-heading">
+                {{ 'About Us' | language: currentLanguage }}
                 <i nz-icon nzType="down"></i>
             </a>
 
             <nz-dropdown-menu #menu="nzDropdownMenu">
                 <ul nz-menu nzSelectable>
-                    <li nz-menu-item>Become a member</li>
+                    <li
+                        nz-menu-item
+                        [class.urduText]="currentLanguage === 'Urdu'"
+                    >
+                        {{ 'Become a member' | language: currentLanguage }}
+                    </li>
                     <li nz-menu-item>
                         <a
                             href="https://www.youtube.com/channel/UCZ4trGJxJZR8GOK5mCY6Luw"
@@ -26,7 +66,6 @@
                             Our Youtube Channel</a
                         >
                     </li>
-                    <li nz-menu-item>3rd menu item</li>
                 </ul>
             </nz-dropdown-menu>
         </ul>
@@ -41,10 +80,16 @@
                 [nzTrigger]="null"
                 nzWidth="250px"
             >
-                <ul nz-menu nzMode="inline" class="side-menu-ul">
+                <ul
+                    nz-menu
+                    nzMode="inline"
+                    class="side-menu-ul"
+                    [class.urduText]="currentLanguage === 'Urdu'"
+                >
                     <app-side-menu-item
                         *ngFor="let item of sideMenuDetails"
                         [sideMenuItem]="item"
+                        [currentLanguage]="currentLanguage"
                         (changeSelection)="openLink($event)"
                     >
                     </app-side-menu-item>

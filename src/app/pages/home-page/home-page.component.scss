@@ -11,8 +11,11 @@
 }
 
 .logo {
-  width: 150px;
+  width: 190px;
+  display: flex;
   cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header-menu {
@@ -73,8 +76,12 @@ nz-header {
   z-index: 2;
   color: #f5f5f5;
 
-  .about-us {
+  .dropdown-heading {
     color: #f5f5f5;
+
+    &.language {
+      font-size: 10px
+    }
   }
 }
 

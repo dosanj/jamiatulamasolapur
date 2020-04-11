@@ -1,6 +1,5 @@
 import { IContentData, ISideMenuItem } from './shared-models';
 import { sideMenuDetails } from '../pages/home-page/navigation-page-data';
-import { debug } from 'util';
 
 export let contentData: {
     [key: string]: IContentData;
