@@ -7,7 +7,7 @@
                 [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
                 (click)="isCollapsed = !isCollapsed"
             ></i>
-            <div class="logo">Jamiat Ulama Solapur</div>
+            <div class="logo" routerLink="/">Jamiat Ulama Solapur</div>
         </div>
         <ul nz-menu [nzMode]="'horizontal'" class="header-menu">
             <a nz-dropdown [nzDropdownMenu]="menu" class="about-us">
