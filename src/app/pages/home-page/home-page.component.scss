@@ -39,6 +39,7 @@
 
 .inner-layout {
   padding: 0 16px 16px;
+  margin-left: 250px
 }
 
 nz-breadcrumb {
@@ -47,7 +48,9 @@ nz-breadcrumb {
 }
 
 nz-sider {
-  position: relative;
+  position: fixed;
+  height: calc(100vh - 64px);
+  overflow-y: auto;
 }
 
 nz-content {
@@ -75,17 +78,17 @@ nz-header {
 }
 
 .side-menu-ul {
-  height: calc(100vh - 64px);
+  height: 100%;
   box-shadow: 2px 0px 2px #e8e8e8;
 }
 
 @media screen and (max-width: 640px) {
   nz-sider {
-    position: fixed;
+    height: 100vh;
   }
 
-  .side-menu-ul {
-    height: 100vh;
+  inner-layout {
+    margin-left: 0;
   }
 }
 

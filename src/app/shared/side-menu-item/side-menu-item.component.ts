@@ -14,7 +14,7 @@ export class SideMenuItemComponent implements OnInit {
 
     ngOnInit() {}
 
-    openLink(link) {
-        this.changeSelection.next(link);
+    openLink(item: ISideMenuItem) {
+        this.changeSelection.next(item);
     }
 }
