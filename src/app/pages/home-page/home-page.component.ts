@@ -21,6 +21,16 @@ export class HomePageComponent implements OnInit {
                 this.changeSelection(event.url);
             }
         });
+        const myElementToCheckIfClicksAreInsideOf = document.getElementById(
+            'nz-layout'
+        );
+        document.body.addEventListener('click', (event: any) => {
+            if (myElementToCheckIfClicksAreInsideOf.contains(event.target)) {
+                if (this.isSmallDevice()) {
+                    this.isCollapsed = true;
+                }
+            }
+        });
     }
 
     isSmallDevice() {
