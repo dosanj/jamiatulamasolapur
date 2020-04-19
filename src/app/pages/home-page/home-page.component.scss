@@ -1,3 +1,5 @@
+@import "../../../scss/mixins";
+
 .trigger {
   font-size: 20px;
   margin-right: 16px;
@@ -57,12 +59,7 @@ nz-sider {
   overflow-y: auto;
 }
 
-nz-content {
-  background: #d0dee4;
-  padding: 16px;
-  min-height: 280px;
-  box-shadow: inset 0px 0px 6px;
-}
+
 
 .header-items {
   display: flex;
@@ -90,7 +87,7 @@ nz-header {
   box-shadow: 2px 0px 2px #e8e8e8;
 }
 
-@media screen and (max-width: 576px) {
+@include if-mobile() {
   nz-sider {
     height: 100vh;
   }

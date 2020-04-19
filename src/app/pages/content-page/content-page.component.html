@@ -1,4 +1,14 @@
 <app-content-data [content]="content$ | async"></app-content-data>
 <div *ngIf="!(content$ | async)">
-    <h1>Home page information</h1>
+    <h2 class="heading">Important Links</h2>
+    <div class="home-page">
+        <div
+            *ngFor="let item of homePageItems"
+            class="home-page-item"
+            [style.background]="item.background"
+            (click)="openLink(item)"
+        >
+            <span>{{ item.text }}</span>
+        </div>
+    </div>
 </div>
